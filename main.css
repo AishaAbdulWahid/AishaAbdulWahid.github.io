@@ -1,0 +1,430 @@
+/*
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Raleway', sans-serif;
+
+*/
+/* Global styles for all elements */
+*{
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+    padding: 0;
+    margin: 0;
+}
+
+/* Root pseudo-class for defining custom properties (variables) */
+:root{
+    --heading: 'Montserrat', sans-serif;
+}
+
+/* Body styling */
+body{
+    font-family: 'Raleway', sans-serif;
+    background: #fff;
+}
+
+/* Global styling for images, lists, and links */
+img{
+    width: 100%; /* Ensures images take up full width of their container */
+}
+ul{
+    list-style: none; /* Removes default list styling */
+}
+
+a{
+    text-decoration: none; /* Removes underline from links */
+    color: #000; /* Sets link color to black */
+}
+
+hr{
+    width: 95vw; /* Sets width to 95% of viewport width */
+    margin: 0 auto;
+}
+/*---------alterations to the nav bar to adjust to the white background---------*/
+.logo {
+    color: black;
+}
+/* Navigation */
+.navigation .menu-icon .nav-icon,
+.navigation .menu-icon .nav-icon::before,
+.navigation .menu-icon .nav-icon::after {
+    background-color: black; /* Change cross sign color to black */
+}
+
+/* Search Box */
+.search-box {
+    background-color: black; /* Change search box background color to black */
+}
+.search-box input {
+    color: white; /* Change text color inside the search box to white */
+}
+.search-box input::placeholder {
+    color: white; /* Change placeholder text color inside the search box to white */
+}
+.search-box button {
+    color: white; /* Change button color inside the search box to white */
+}
+
+
+/* header styling */
+
+.top-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    background: #252525;
+    color: #fff;
+    padding: 20px 30px;
+}
+
+.top-head .fas{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* banner styling */
+
+.banner{
+    min-height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding: 30px 0;
+    margin-top: 8px;
+}
+
+.banner-main-content{
+    padding: 0 2rem;
+    line-height: 1.7;
+}
+
+.banner-main-content h2{
+    font-size: 2rem;
+    font-family: var(--heading);
+}
+
+.banner-main-content h3{
+    padding: 1rem 0;
+}
+
+.banner-main-content button{
+    border: none;
+    background: #252525;
+    padding: 14px 18px;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    transition: background 1s ease;
+}
+
+.banner-main-content button a{
+    color: #f3f3f3f3;
+    transition: color 1s ease;
+}
+
+.banner-main-content button:hover{
+    background: #fff;
+}
+
+.banner-main-content button:hover a{
+    color: #0d0a0b;
+}
+
+/* Current news header styling */
+.current-news-head{
+    background: #fff;
+    padding: 20px;
+    font-size: 12px;
+    margin: 20px 0; /* Adds vertical margin */
+}
+
+.current-news-head h3{
+    padding: 6px;
+    cursor: pointer;
+    position: relative;
+}
+
+.current-news-head h3:hover::before{
+    content: ">> "; /* Adds content before the element */
+    position: absolute;
+    left: -12px; /* Sets left position */
+}
+
+.current-news-head span{
+    display: block;
+    font-family: var(--heading); /* Uses custom heading font */
+    font-weight: 300;
+    text-transform: uppercase; /* Transforms text to uppercase */
+}
+
+/* Hot topic section styling */
+.hot-topic{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding: 12px;
+    height: 300px;
+}
+
+.hot-topic img{
+    display: block;
+}
+
+.hot-topic-content{
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    line-height: 1.3;
+    color: #f3f3f3;
+}
+
+.hot-topic h2{
+    padding: 10px 0;
+    font-size: 18px;
+    text-shadow: 0 0 2px #000;
+}
+
+.hot-topic h3{
+    padding: 10px 0;
+    font-size: 16px;
+    text-shadow: 0 0 2px #000;
+}
+
+.hot-topic p{
+    padding: 10px 0;
+    font-size: 15px;
+    text-shadow: 0 0 2px #000;
+    padding: 12px 10px;
+}
+
+.hot-topic-content a{
+    display: block;
+    background: #f3f3f3;
+    border: none;
+    width: 95px;
+    border-radius: 2px;
+    text-align: center;
+    padding: 7px 10px;
+    font-size: 14px;
+    margin: 10px 0 10px 10px;
+}
+
+.hot-topic-content a:hover{
+    text-decoration: underline;
+}
+
+/* Main content links styling */
+main a{
+    padding: 15px 0;
+    display: block;
+    transition: all 0.5s;
+}
+
+main span{
+    transition: padding-left 0.5s;
+}
+
+main a:hover span{
+    padding-left: 5px;
+}
+
+main a:hover{
+    color: black;
+}
+
+/* Left main container styling */
+.main-container-left{
+    padding: 30px 10px;
+}
+
+.main-container-left > h2{
+    padding: 15px 0 15px 30px;
+}
+
+.main-container-left h3{
+    padding: 10px 0;
+    font-size: 18px;
+    font-family: var(--heading);
+}
+
+.main-container-left p{
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.main-container-left article{
+    padding: 10px;
+}
+
+.container-top-left{
+    padding: 15px 30px;
+}
+
+.container-bottom-left{
+    background: #f3f3f3;
+    margin: 15px 30px;
+}
+
+/* Right main container styling */
+.main-container-right{
+    padding: 30px 10px;
+}
+
+.main-container-right > h2{
+    padding: 15px 0 15px 30px;
+}
+
+.main-container-right article{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    padding: 15px 0;
+    border-bottom: 1px solid black;
+}
+
+.main-container-right article:last-child{
+    border-bottom: none;
+}
+
+.main-container-right img{
+    width: 100px;
+    height: 100px;
+    align-self: center;
+}
+
+.main-container-right h4{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 12px;
+    align-self: center;
+}
+
+.main-container-right article h2{
+    font-size: 18px;
+    padding: 10px 0;
+    font-family: var(--heading);
+}
+
+.main-container-right article p{
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.main-container-right article div{
+    margin-right: 10px;
+}
+
+/* Responsive styles for smaller screens */
+@media(max-width: 460px){
+    .hot-topic-content h2{
+        font-size: 16px;
+    }
+
+    .main-container-right article{
+        display: block; /* Changes layout to block */
+    }
+
+    .main-container-right article img{
+        display: none; /* Hides images */
+    }
+}
+
+/* Responsive styles for slightly larger screens */
+@media(max-width: 500px){
+    .main-container-right article{
+        grid-template-columns: 1fr 3fr; /* Sets grid columns */
+        grid-template-rows: 1fr 1fr; /* Sets grid rows */
+    }
+
+    .main-container-right article h4{
+        grid-row: 1/2; /* Sets grid row */
+        grid-column: 1/2; /* Sets grid column */
+        align-self: flex-start; /* Aligns text to the start */
+    }
+
+    .main-container-right article img{
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    .main-container-right article div{
+        grid-row: 1/3;
+        grid-column: 2/3;
+    }
+}
+
+/* Responsive styles for larger screens */
+@media(min-width: 768px){
+    .banner-sub-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container-bottom-left{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+/* Responsive styles for even larger screens */
+@media(min-width: 800px){
+    /* nav */
+    /* Navigation bar styles */
+    .ham-btn, .times-btn{
+        display: none!important;
+    }
+
+    .navigation-container{
+        display: flex;
+        background: #252525;
+        align-items: center;
+        flex-wrap: wrap; /* Allows wrapping of items */
+    }
+
+    .top-head{
+        flex: 0 0 15%;
+    }
+
+    .nav-bar{
+        flex: 1 0 auto;
+        height: 100%;
+        background: transparent; /* Sets background to transparent */
+    }
+
+    .nav-bar nav ul{
+        display: flex;
+        justify-content: center;
+    }
+    .nav-bar nav ul li{
+        padding-right: 30px;
+    }
+
+    .nav-bar nav ul li:hover{
+        background: none; /* Removes background on hover */
+    }
+
+
+    .footer-container{
+        display: flex;
+    }
+
+    .footer-right,
+    .footer-left{
+        flex: 1;
+    }
+}
+
+@media(min-width: 992px){
+    main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 1080px){
+    .banner{
+        grid-template-columns: 1fr 2fr;
+    }
+}
