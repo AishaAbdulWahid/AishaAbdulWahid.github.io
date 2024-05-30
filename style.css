@@ -1,0 +1,568 @@
+/* Reset styles */
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: poppins; /* Set default font family to Poppins */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Body styles */
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: poppins;
+    background-color: #080808;
+}
+/* List styles */
+ul{
+    list-style: none; /* Remove default list styles */
+}
+/* Link styles */
+a{
+    text-decoration: none; /* Remove default underline from links */
+}
+/* Selection styles */
+::selection{
+    background-color: #89CFF0; /*Changes the background color of the text that is selected by the user.*/
+
+}
+/*==navigation=======================================*/
+.navigation{
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    padding: 30px 50px;
+    max-width: 1400px;
+    margin: auto;
+    width: 100%;
+}
+/* Menu icon styles */
+.navigation .menu-icon{
+    cursor: pointer; /* Set cursor to pointer */
+    float:right;
+    padding: 20px 10px;
+    z-index: 103;
+}
+/* Navigation icon styles */
+.navigation .menu-icon .nav-icon{
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    width: 25px;
+    position: relative;
+    transition: background o.2ps ease-out; /* Transition effect */
+}
+/* Navigation icon before and after styles */
+.navigation .menu-icon .nav-icon::before,
+.navigation .menu-icon .nav-icon::after{
+    background-color: #ffffff;
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all ease-out 0.2s;
+}
+/* Navigation icon before styles */
+.navigation .menu-icon .nav-icon::before{
+    top: 8px;
+}
+/* Navigation icon after styles */
+.navigation .menu-icon .nav-icon::after{
+    top: -8px;
+}
+/* Checked state of menu button */
+.navigation .menu-btn:checked ~ .menu-icon .nav-icon{
+    background-color: transparent;
+}
+/* Checked state of menu button - before */
+.navigation .menu-btn:checked ~ .menu-icon .nav-icon::before{
+    transform: rotate(-45deg); /* Rotate -45 degrees */
+    top: 0px;
+}
+/* Checked state of menu button - after */
+.navigation .menu-btn:checked ~ .menu-icon .nav-icon::after{
+    transform: rotate(45deg);
+    top: 0px;
+}
+/* Menu styles */
+.menu-btn{
+    display: none;
+}
+
+/*--menu--------------------*/
+.menu{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #111111f1;
+    z-index: 102;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation: fade 0.3s; /*The nav-bar fades in after 0.3sec ones the menu-btn is clicked.*/
+}
+.menu li a{
+    color: #ffffff;
+    margin:0px 40px;
+    font-size: 2rem;
+    font-family: Monoton;
+    transition: all ease 0.3s;
+}
+/* Menu styles */
+.menu li a:hover{
+    font-size: 2.3rem; /* Increase font size */
+    color: #89CFF0; /* Change text color */
+    transition: all ease 0.3s; /* Transition effect */
+}
+/* Show menu when menu button is checked */
+.navigation .menu-btn:checked ~ .menu{
+    display: flex; /*The navigation bar is visible ones the menu-btn is clicked.*/
+}
+/* Fade animation */
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/*--logo---------------------*/
+/* Logo styles */
+.logo{
+    color: white;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 0px auto 0px 40px;
+    display: flex;
+    align-items: center;
+    font-family: Monoton;
+    letter-spacing: 1px;
+}
+.logo span{
+    font-size: 2rem;
+    margin-left: 5px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+/*--search-box----*/
+.search-box{
+    background-color: #d1d1d111;
+    padding: 3px 20px;
+    border-radius: 20px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+}
+/* Search box input styles */
+.search-box input{
+    background-color: transparent; /* Set background color to transparent */
+    border: none;
+    outline: none;
+    color: #ffffff;
+}
+/* Search box input placeholder styles */
+.search-box input::placeholder{
+    color: #ffffff5e;
+}
+/* Search box button styles */
+.search-box button{
+    background-color: transparent;
+    color: #ffffffc9;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+/* carousel container */
+.carousel{
+    height: 100vh; /* Set the height of the carousel to 100% of the viewport height */
+    margin-top: -50px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+/* Carousel item */
+.carousel .list .item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0; /* Positioning the item to fill the entire carousel container */
+}
+/* Carousel item image */
+.carousel .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio while covering the entire space */
+}
+/* Carousel item content */
+.carousel .list .item .content{
+    position: absolute;
+    top: 10%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-30%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004; /* Add text shadow for better readability */
+}
+/* Carousel item author */
+.carousel .list .item .author{
+    font-weight: bold;
+    letter-spacing: 10px; /* Add letter spacing */
+}
+/* Carousel item title and topic */
+.carousel .list .item .title,
+.carousel .list .item .topic{
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+.carousel .list .item .topic{
+    color: #f1683a;
+}
+.carousel .list .item .buttons{
+    display: grid; /* Display buttons as grid */
+    grid-template-columns: repeat(2, 130px); /* Set button container columns */
+    grid-template-rows: 40px;
+    gap: 5px; /* Set gap between buttons */
+    margin-top: 20px; ; /* Add top margin */
+}
+/* Carousel item buttons */
+.carousel .list .item .buttons button{
+    border: none; /* Remove button border */
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;
+}
+/* Styling for the second button in carousel items */
+.carousel .list .item .buttons button:nth-child(2){
+    background-color: transparent; /* Set second button background color to transparent */
+    border: 1px solid #fff; /* Add border to second button */
+    color: #eee; /* Set text color for the second button */
+}
+
+
+/* thumbail container */
+.thumbnail{
+    position: absolute;
+    bottom: 50px; /* Position the thumbnail container 50px from the bottom */
+    left: 50%; /* Position the thumbnail container horizontally centered */
+    width: max-content; /* Set the width to fit its content */
+    z-index: 100; /* Set the z-index to ensure it appears above other elements */
+    display: flex;
+    gap: 20px; /* Set gap between thumbnail items */
+}
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0; /* Prevent thumbnail items from shrinking */
+    position: relative;
+}
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio while covering the entire space */
+    border-radius: 20px; /* Add border radius to create rounded corners */
+}
+.thumbnail .item .content{
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+.thumbnail .item .content .title{
+    font-weight: 500;
+}
+.thumbnail .item .content .description{
+    font-weight: 300;
+}
+
+/* arrows container */
+.arrows{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.arrows button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+    z-index: 100; /* Set the z-index to ensure it appears above other elements */
+}
+/* Hover effect for arrow buttons */
+.arrows button:hover{
+    background-color: #fff; /* Change background color on hover */
+    color: #000; /* Change text color on hover */
+}
+
+/* animation */
+/* Set the z-index of the first carousel item to ensure it appears on top */
+.carousel .list .item:nth-child(1){
+    z-index: 1;
+}
+
+/* animation text in first item */
+
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons
+{
+    /* Initial position and appearance of text content */
+    transform: translateY(50px); /* Move content down by 50px */
+    filter: blur(20px); /* Apply blur effect */
+    opacity: 0;
+    /* Animation to show content */
+    animation: showContent .5s 1s linear 1 forwards;
+}
+@keyframes showContent{
+    to{
+        transform: translateY(0px); /* Move content back to its original position */
+        filter: blur(0px); /* Remove blur effect */
+        opacity: 1;
+    }
+}
+/* Set animation delay for title, topic, description, and buttons */
+.carousel .list .item:nth-child(1) .content .title{
+    animation-delay: 1.2s!important; /* Override default animation delay */
+}
+.carousel .list .item:nth-child(1) .content .topic{
+    animation-delay: 1.4s!important;
+}
+.carousel .list .item:nth-child(1) .content .des{
+    animation-delay: 1.6s!important;
+}
+.carousel .list .item:nth-child(1) .content .buttons{
+    animation-delay: 1.8s!important;
+}
+/* create animation for img when next button is clicked */
+.carousel.next .list .item:nth-child(1) img{
+     /* Expand image to full size */
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 20px;
+    animation: showImage .5s linear 1 forwards; /* Keyframes, duration, timing, iteration, fill mode */
+}
+@keyframes showImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+/* Animate thumbnail when next button is clicked */
+.carousel.next .thumbnail .item:nth-last-child(1){
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+/* Set z-index for image in the previous item */
+.carousel.prev .list .item img{
+    z-index: 100;
+}
+@keyframes showThumbnail{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+.carousel.next .thumbnail{
+    animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+    from{
+        transform: translateX(150px);
+    }
+}
+
+/* running time */
+
+.carousel .time{
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 3px;
+    background-color: #f1683a;
+    left: 0;
+    top: 0;
+}
+
+.carousel.next .time,
+.carousel.prev .time{
+    animation: runningTime 3s linear 1 forwards;
+}
+@keyframes runningTime{
+    from{ width: 100%}
+    to{width: 0}
+}
+
+
+/* effect prev click */
+
+.carousel.prev .list .item:nth-child(2){
+    z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img{
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1){
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.next .arrows button,
+.carousel.prev .arrows button{
+    pointer-events: none;
+}
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .buttons
+{
+    animation: contentOut 1.5s linear 1 forwards!important;
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+.carousel.next .arrows button,
+.carousel.prev .arrows button{
+    pointer-events: none;
+}
+
+/* time */
+.time{
+    width: 0%;
+    height: 3px;
+    background-color: #f1683a;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+}
+.carousel.next .time,
+.carousel.prev .time{
+    width: 100%;
+    animation: timeRunning 2s linear 1 forwards;
+}
+@keyframes timeRunning{
+    to{
+        width: 0;
+    }
+}
+@media screen and (max-width: 678px) {
+    .carousel .list .item .content{
+        padding-right: 0;
+    }
+    .carousel .list .item .content .title{
+        font-size: 30px;
+    }
+}
+
+/*--------footer----------------------------*/
+.new-footer {
+    margin-top: 150px;
+    width: 100%;
+    padding: 100px 15%;
+    background: #696969;
+    color: #efefef;
+    display: flex;
+}
+.new-footer div {
+    text-align: center;
+}
+.new-footer .col-2 {
+    flex-grow: 2;
+}
+.new-footer div h3 {
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+.new-footer .col-1 a {
+    display: block;
+    text-decoration: none;
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.new-footer form input {
+    width: 400px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
+    border: none;
+}
+.new-footer form button {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.new-footer .social-icons {
+    margin-top: 30px;
+}
+.new-footer .social-icons i {
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
