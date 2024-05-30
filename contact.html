@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <!--==Title=====================================-->
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="contact_page_styling.css">
+
+    <!--Stylesheet(CSS)=============================-->
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://kit.fontawesome.com/aa4fbf3f16.js" crossorigin="anonymous"></script>
+
+    <!--==fav-icon==================================-->
+    <link rel="shortcut icon" href="images/fav-icon.png"/>
+
+    <!--Import-poppins-font=========================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">
+
+    <!--Import-Monoton-Font=========================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">
+
+    <!--==Uisng-Font-Awesome========================-->
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossoeigin="anonymous"></script>
+</head>
+
+
+<body>
+
+    <!--==Navigation==================================-->
+    <nav class="navigation">
+
+        <!--menu-btn-------------------->
+        <input type="checkbox" class="menu-btn" id="menu-btn">
+        <label for="menu-btn" class="menu-icon">
+            <span class="nav-icon"></span>
+        </label>
+
+
+        <!--logo------------------------>
+        <a href="index.html" class="logo">
+            HYBE<span>Labels</span>
+        </a>
+
+        <!--menu------------------------>
+        <ul class="menu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="shop.html">STORE</a></li>
+            <li><a href="company.html">COMPANY</a></li>
+            <li><a href="news.html">NEWS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+        </ul>
+
+        <!--Search-box------------------->
+        <form action="" class="search-box">
+            <!--input-->
+            <input type="text" name="search" placeholder="Search" class="search-input" required/>
+            <!--btn-->
+            <button type="submit">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    
+    </nav>
+    <!--nav-end-->
+    <script src="app.js"></script>
+    
+    
+<!--===Contact page========================================================-->
+<!-- Start of the section with id "section-wrapper "-->
+<section id="section-wrapper">
+    <!-- Start of div with class "box-wrapper" -->
+    <div class="box-wrapper">
+        <!-- Start of the div with class "info-wrap" -->
+        <div class="info-wrap">
+            <!-- Heading for the contact information -->
+            <h2 class="info-title">Contact Information</h2>
+            <!-- Subheading for the contact information -->
+            <h3 class="info-sub-title">Kindly fill out the form, and rest assured, our dedicated team at Hybe will promptly attend to your inquiry.</h3>
+            <!-- Unordered list for the contact details -->
+            <ul class="info-details">
+                <!-- Label for the phone number -->
+                <li>
+                    <!-- List item for the phone number -->
+                    <i class="fas fa-phone-alt"></i>
+                    <!-- Label for the phone number -->
+                    <span>Phone:</span> <a href="tel:+ 1235 2355 98">+ 1235 2355 98</a>
+                </li>
+                <!-- List item for the email address -->
+                <li>
+                    <!-- Icon for the email address -->
+                    <i class="fas fa-paper-plane"></i>
+                    <!-- Label for the email address -->
+                    <span>Email:</span> <a href="mailto:info@yoursite.com">example@hybe.com</a>
+                </li>
+                <!-- List item for the website -->
+                <li>
+                    <!-- Icon for the website -->
+                    <i class="fas fa-globe"></i>
+                    <!-- Label for the website -->
+                    <span>Website:</span> <a href="#">hybe.com</a>
+                </li>
+            </ul>
+            <!-- Unordered list for the social icons -->
+            <ul class="social-icons">
+                <!-- List item for the Facebook link -->
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <!-- List item for the Twitter link -->
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <!-- List item for the LinkedIn link -->
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+         <!-- End of the div with class "info-wrap" -->
+        
+         <!-- Start of the div with class "form-wrap" -->
+         <div class="form-wrap">
+             <!-- Start of the form -->
+            <form action="#" method="POST">
+                <!-- Heading for the form -->
+                <h2 class="form-title">Send us a message</h2>
+                <!-- Start of the div with class "form-fields" -->
+                <div class="form-fields">
+
+                    <!-- Start of the div with class "form-group" for the first name -->
+                    <div class="form-group">
+                        <!-- Input field for the first name -->
+                        <input type="text" class="fname" placeholder="First Name">
+                    </div>
+                    <div class="form-group">
+                        <!-- Input field for the last name -->
+                        <input type="text" class="lname" placeholder="Last Name">
+                    </div>
+                    <!-- Start of the div with class "form-group" for the email -->
+                    <div class="form-group">
+                        <!-- Input field for the email -->
+                        <input type="email" class="email" placeholder="Mail">
+                    </div>
+                    <!-- Start of the div with class "form-group" for the phone number -->
+                    <div class="form-group">
+                        <!-- Input field for the phone number -->
+                        <input type="number" class="phone" placeholder="Phone">
+                    </div>
+                    <!-- Start of the div with class "form-group" for the message -->
+                    <div class="form-group">
+                        <!-- Text area for the message -->
+                        <textarea name="message" id="" placeholder="Write your message"></textarea>
+                    </div>
+                </div>
+
+                <!-- Submit button for the form -->
+                <input type="submit" value="Send Message" class="submit-button">
+            </form>
+        </div> <!-- End of the div with class "form-wrap" -->
+    </div> <!-- End of the div with class "box-wrapper" -->
+</section> <!-- End of the section with id "section-wrapper" -->
+
+
+<!--==========footer=======================================-->
+<div class="footer new-footer"> <!-- Added new-footer class here -->
+    <div class="col-1">
+        <h3>USEFUL LINKS</h3>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <a href="#">Shop</a>
+        <a href="#">Blog</a>
+    </div>
+    <div class="col-2">
+        <h3>NEWSLETTER</h3>
+        <form>
+            <input type="email" placeholder="Your Email Address" required>
+            <br>
+            <button type="submit">HYBE MEMBERSHIP</button>
+        </form>
+    </div>
+    <div class="col-3">
+        <h3>CONTACT</h3>
+        <p>Yongsan Trade Center, 42, Hangang-daero, Seoul,<br> Republic of Korea</p>
+        <!-- Start of the div with class "social-icons" -->
+        <div class="social-icons">
+            <!-- Facebook icon -->
+            <i class="fa-brands fa-facebook"></i>
+            <!-- Twitter icon -->
+            <i class="fa-brands fa-twitter"></i>
+            <!-- Instagram icon -->
+            <i class="fa-brands fa-instagram"></i>
+            <!-- YouTube icon -->
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
+
+  
