@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Page</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="shop.css">
+</head>
+<!-- The body element contains the content of the HTML document -->
+<body class="">
+    <!-- Start of the div with class "container" -->
+    <div class="container">
+        <header>
+            <!-- Start of the div with class "title" -->
+            <div class="title">
+                <!-- Link to the home page -->
+                <a href="/">Official Merch</a>
+            </div> <!-- End of the div with class "title" -->
+            
+            <!-- Start of the div with class "icon-cart" -->
+            <div class="icon-cart">
+                <!-- SVG element for the cart icon -->
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+                </svg>
+                <!-- Span element for the number of items in the cart -->
+                <span>0</span>
+            </div> <!-- End of the div with class "icon-cart" -->
+        </header>
+        <!-- Start of the div with id "contentTab" -->
+        <div id="contentTab">
+        </div> <!-- End of the div with id "contentTab" -->
+    </div>
+
+    <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart">
+        </div>
+        <!-- Start of the div with class "btn" -->
+        <div class="btn">
+            <!-- Button for closing the cart -->
+            <button class="close">CLOSE</button>
+            <!-- Button for checking out -->
+            <button class="checkOut">Check Out</button>
+        </div> <!-- End of the div with class "btn" -->
+    </div> <!-- End of the div with class "cartTab" -->
+
+
+    <!-- Script element linking to an external JavaScript file -->
+    <script src="cart.js" type="module"></script>
+</body>
+</html>
