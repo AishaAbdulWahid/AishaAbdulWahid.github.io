@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <!--==Title=====================================-->
+    <title>About Page</title>
+
+    <!--Stylesheet(CSS)=============================-->
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="about_page_style.css"/>
+    <!-- Importing Font Awesome for icons===========-->
+    <script src="https://kit.fontawesome.com/aa4fbf3f16.js" crossorigin="anonymous"></script>
+
+    <!--fav-icon====================================-->
+    <link rel="shortcut icon" href="images/fav-icon.png"/>
+
+    <!--Import-poppins-font=========================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">
+
+    <!--Import-Monoton-Font=========================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">
+
+    <!--Using-Font-Awesome==========================-->
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossoeigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!--Navigation==================================-->
+    <nav class="navigation">
+
+        <!--menu-btn-------------------->
+        <input type="checkbox" class="menu-btn" id="menu-btn">
+        <label for="menu-btn" class="menu-icon">
+            <span class="nav-icon"></span>
+        </label>
+
+        <!--logo------------------------>
+        <a href="index.html" class="logo">
+            HYBE<span>Labels</span>
+        </a>
+
+        <!--menu------------------------>
+        <ul class="menu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="shop.html">STORE</a></li>
+            <li><a href="company.html">COMPANY</a></li>
+            <li><a href="news.html">NEWS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+        </ul>
+
+        <!--Search-box------------------->
+        <form action="" class="search-box">
+            <!--input-->
+            <input type="text" name="search" placeholder="Search" class="search-input" required/>
+            <!--btn-->
+            <button type="submit">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    
+    </nav>
+    <!--nav-end-->
+    
+
+    <!--===About-page-Cards==========================================================-->
+    <div class="wrapper">
+        <div class="container">
+            <input type="radio" name="slide" id="c1" checked>
+            <label for="c1" class="card">
+                <div class="row">
+                    <div class="icon">1</div>
+                    <div class="description">
+                        <h4>Who We Are</h4>
+                        <p>HYBE innovates the music industry business model under the mission, "We believe in music". 
+                            HYBE strive for the world's best entertainment lifestyle platform company based on music.</p>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c2" >
+            <label for="c2" class="card">
+                <div class="row">
+                    <div class="icon">2</div>
+                    <div class="description">
+                        <h4>Bang Si-Hyuk (Chairman)</h4>
+                        <p>Bang Si-Hyuk, also known as "Hitman" Bang, is the founder and chairman of HYBE Corporation.</p>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c3" >
+            <label for="c3" class="card">
+                <div class="row">
+                    <div class="icon">3</div>
+                    <div class="description">
+                        <h4>Jiwon Park (HYBE CEO)</h4>
+                        <p>Park has played a crucial role in the company's expansion and diversification, overseeing its transformation into a global entertainment powerhouse.</p>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c4" >
+            <label for="c4" class="card">
+                <div class="row">
+                    <div class="icon">4</div>
+                    <div class="description">
+                        <h4>Hyunrock Han (HYBE JAPAN CEO)</h4>
+                        <p>With a deep understanding of the Japanese entertainment market, Han has played a pivotal role in expanding HYBE's presence and influence in Japan.</p>
+                    </div>
+                </div>
+            </label>
+        </div>
+    </div>
+
+     <!--==========footer=======================================-->
+<div class="footer new-footer"> <!-- Added new-footer class here -->
+    <div class="col-1">
+        <h3>USEFUL LINKS</h3>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <a href="#">Shop</a>
+        <a href="#">Blog</a>
+    </div>
+    <div class="col-2">
+        <h3>NEWSLETTER</h3>
+        <form>
+            <input type="email" placeholder="Your Email Address" required>
+            <br>
+            <button type="submit">HYBE MEMBERSHIP</button>
+        </form>
+    </div>
+    <div class="col-3">
+        <h3>CONTACT</h3>
+        <p>Yongsan Trade Center, 42, Hangang-daero, Seoul,<br> Republic of Korea</p>
+        <div class="social-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+    </div>
+</div>
+
+<!-- Link to external JavaScript file -->
+<script src="app.js"></script>
+</body>
+</html>
+
