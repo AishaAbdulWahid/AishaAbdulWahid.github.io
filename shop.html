@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <!--==Title=====================================-->
+    <title>Document</title>
+
+    <!--Stylesheet(CSS)=============================-->
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="shop.css">
+
+    <!--==fav-icon==================================-->
+    <link rel="shortcut icon" href="images/fav-icon.png"/>
+
+    <!--Import-poppins-font=========================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">
+
+    <!--Import-Monoton-Font=========================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">
+
+    <!--==Uisng-Font-Awesome========================-->
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossoeigin="anonymous"></script>
+</head>
+
+
+<body>
+
+    <!--==Navigation==================================-->
+    <nav class="navigation">
+
+        <!--menu-btn-------------------->
+        <input type="checkbox" class="menu-btn" id="menu-btn">
+        <label for="menu-btn" class="menu-icon">
+            <span class="nav-icon"></span>
+        </label>
+
+
+        <!--logo------------------------>
+        <a href="index.html" class="logo">
+            HYBE<span>Labels</span>
+        </a>
+
+        <!--menu------------------------>
+        <ul class="menu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="shop.html">STORE</a></li>
+            <li><a href="company.html">COMPANY</a></li>
+            <li><a href="news.html">NEWS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+        </ul>
+
+        <!--Search-box------------------->
+        <form action="" class="search-box">
+            <!--input-->
+            <input type="text" name="search" placeholder="Search" class="search-input" required/>
+            <!--btn-->
+            <button type="submit">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    
+    </nav>
+    <!--nav-end-->
+    
+
+    <!--Store-page==================================================================-->
+    <div id="app"></div>
+    <div id="temporaryContent">
+        <div class="listProduct">
+        </div>
+    </div>
+
+    <script src="app.js" type="module"></script>
+</body>
